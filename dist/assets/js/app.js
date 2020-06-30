@@ -34,4 +34,56 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
         });
     }, false);
 })();
+
+$(document).ready(function() {
+    $('.navigation-wrapper ul .nav-link a').click(function() {
+        $(this).parent().parent().find('.nav-link.active').removeClass('active');
+        $(this).parent().addClass('active');
+        if ($(window).width() <= 1024) {
+            var top = $('html').find($(this).attr('href')).offset().top - 75;
+            $('html, body').animate({ scrollTop: top }, 800, 'easeInOutCubic');
+            return false;
+        } else {
+            var top = $('html').find($(this).attr('href')).offset().top - 100;
+            $('html, body').animate({ scrollTop: top }, 800, 'easeInOutCubic');
+            return false;
+        }
+
+    });
+});
+
+$(document).ready(function() {
+    var addButton = $('.add_formation'); //Add button selector
+    var wrapper = $('.form-group.formation'); //Input field wrapper
+    var fieldHTML = '<div class="formation-wrapper d-flex flex-column align-items-end"><div class="form-row"><div class="form-group col-md-6"><label for="startDate">Date début</label><input type="date" class="form-control" placeholder="Start Year" name="startdate" /></div><div class="form-group col-md-6"><label for="endDare">Date fin</label><input type="date" class="form-control" placeholder="End Year" /></div><div class="form-group col-md-6"><label for="Establishement">Establishement</label><input type="text" class="form-control" placeholder="Establishement" /></div><div class="form-group col-md-6"><label for="diplome">Diplôme</label><input type="text" class="form-control" placeholder="diplome" /></div></div><a href="javascript:void(0);" class="remove_button float-right" title="Remove field">Effacer une formation<i class="fas fa-minus ml-2"></i></a></div>';
+
+    //Once add button is clicked
+    $(addButton).click(function() {
+        //Check maximum number of input fields
+        $(wrapper).append(fieldHTML); //Add field html
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function(e) {
+        e.preventDefault();
+        $(this).parent('.formation-wrapper').remove(); //Remove field html
+    });
+});
+
+$(document).ready(function() {
+    var addButton = $('.add_experience'); //Add button selector
+    var wrapperExp = $('.form-group.experience'); //Input field wrapper
+    var fieldHTMLExp = '<div class="experience-wrapper d-flex flex-column align-items-end"><div class="form-row"><div class="form-group col-md-6"><label for="startDate">Date début</label><input type="date" class="form-control" placeholder="Start Year" name="startdate" /></div><div class="form-group col-md-6"><label for="endDare">Date fin</label><input type="date" class="form-control" placeholder="End Year" /></div><div class="form-group col-md-6"><label for="societe">Société</label><input type="text" class="form-control" placeholder="Société" /></div><div class="form-group col-md-6"><label for="poste">Poste</label><input type="text" class="form-control" placeholder="poste" /></div></div><a href="javascript:void(0);" class="remove_button float-right" title="Remove field">Effacer une experience<i class="fas fa-minus ml-2"></i></a></div>';
+
+    //Once add button is clicked
+    $(addButton).click(function() {
+        $(wrapperExp).append(fieldHTMLExp); //Add field html
+    });
+
+    //Once remove button is clicked
+    $(wrapperExp).on('click', '.remove_button', function(e) {
+        e.preventDefault();
+        $(this).parent('.experience-wrapper').remove(); //Remove field html
+    });
+});
 //# sourceMappingURL=app.js.map

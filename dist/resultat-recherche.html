@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bagolagona</title>
+    <link rel="shortcut icon" href="assets/img/Group 32.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
@@ -19,30 +20,34 @@
     <main role="main">
         <nav class="connected-nav sticky-top">
             <div class="container py-3">
-                <ul class="d-flex justify-content-between align-items-center">
-                    <li>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <a href="homepage.html">
                             <img src="./assets/img/logo.png">
                         </a>
-                    </li>
-                    <li class="connexion d-flex align-items-center">
+                    </div>
+                    <div class="connexion d-flex align-items-center">
                         <div class="btn-group">
                             <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                <img src="./assets/img/user.png">
                               <span>Espace Client</span>
                             </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/user">Mon compte</a>
-                                <a class="dropdown-item" href="/user/logout">Se déconnecter</a>
-                            </div>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="/user">Mon compte</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/user/logout">Se déconnecter</a>
+                                </li>
+                            </ul>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </nav><div class="search-result py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-6">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <div class="result">
                             <h1>
                                 Résultat(s) de votre recherche
@@ -52,11 +57,11 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-6">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb bg-transparent d-flex justify-content-end">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            <ol class="breadcrumb bg-transparent d-flex justify-content-lg-end justify-content-md-end justify-content-start">
+                                <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Recherche</li>
                             </ol>
                         </nav>
                     </div>
@@ -74,7 +79,7 @@
                             <option value="4">Nice</option>
                             <option value="5">Bordeaux</option>
                             <option value="6">Nante</option>
-                          </select>
+                        </select>
                         <div class="input-group-append d-lg-flex d-md-flex d-none">
                             <button class="btn btn-info" type="button">Rechercher</button>
                         </div>
@@ -84,25 +89,25 @@
                     </div>
                 </div>
                 <div class="search-filter">
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="input-group">
                                     <select class="custom-select form-control" id="inputGroupSelect01">
-                                      <option selected>Lieu du service</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                                        <option selected>Lieu du service</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="input-group">
                                     <select class="custom-select form-control" id="inputGroupSelect01">
-                                      <option selected>Trier par</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                                        <option selected>Trier par</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
                                     </select>
                                 </div>
                             </div>
@@ -115,6 +120,175 @@
                         </div>
                     </div>
                 </div>
+                <div class="row profile-result mx-0 w-100">
+                    <div class="card-deck d-flex flex-wrap my-5">
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+                                <h5 class="card-title">Nome d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+                                <h5 class="card-title">Nome d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-top">
+                                <img class="card-img-top" src="../assets/img/user-profile.png" alt="Card image cap">
+                                <div class="price">
+                                    <span class="mr-1">10€</span>/<span class="ml-1">heure</span>
+                                </div>
+        
+                                <h5 class="card-title">Nom d'utilisateur</h5>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text">
+                                    <img src="../assets/img/geo.png" class="mr-1">
+                                    Localisation</span>
+                                <a href="#" class="more">Voir profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="false">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <footer class="inner-footer">
@@ -141,8 +315,8 @@
                     </div>
                 </div>
                 <hr>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span>© Copyright 2020 Bagolagona. Tous droits réservés. </span>
+                <div class="d-flex flex-md-row flex-column justify-content-between align-items-center">
+                    <span class="mb-md-0 mb-3">© Copyright 2020 Bagolagona. Tous droits réservés. </span>
                     <div class="d-flex justify-content-between social-media">
                         <a href="">
                             <i class="fab fa-instagram"></i>

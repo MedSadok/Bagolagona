@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bagolagona</title>
+    <link rel="shortcut icon" href="assets/img/Group 32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <main role="main">
+        <nav class="connected-nav sticky-top">
+            <div class="container py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="homepage.html">
+                            <img src="./assets/img/logo.png">
+                        </a>
+                    </div>
+                    <div class="connexion d-flex align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <img src="./assets/img/user.png">
+                              <span>Espace Client</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="/user">Mon compte</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/user/logout">Se déconnecter</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav><div class="profile-page pb-5">
+            <div class="profile-top-section">
+                <div class="cover-photo">
+                    <img src="../assets/img/cover-pic-2.jpg" alt="photo de couverture">
+                </div>
+                <div class="container">
+                    <div class="profile d-flex align-items-center">
+                        <img src="../assets/img/user-photo-exemple.png" alt="photo de profile">
+                        <div class="user d-flex flex-column justify-content-start align-items-start">
+                            <h1>Nom d'utilisateur</h1>
+                            <h2>Métier d'utilisateur</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-wrapper">
+                <div class="container">
+                    <nav>
+                        <ul class="d-flex justify-content-between">
+                            <li class="nav-link active">
+                                <a href="#coordonnees">Coordonnées</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#informations">Informations personnelles</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#competences">Compétences</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="edit-section container">
+                <div id="coordonnees" class="row mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h3>Coordonnées</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez fournir une adresse électronique valide!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone">Téléphone</label>
+                                        <input type="tel" class="form-control" id="phone" pattern="[789][0-9]{9}" placeholder="Téléphone" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez fournir un numéro valide!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3 form-group">
+                                        <label for="password">Mot de passe</label>
+                                        <input type="text" id="pwdId" class="form-control" pattern="^[a-z]{2,6}$" required>
+                                        <div class="valid-feedback">Valid</div>
+                                        <div class="invalid-feedback">Doit contenir 8 à 20 caractères.</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3 form-group">
+                                        <label for="confirme-password">Confirmé votre mot de passe</label>
+                                        <input type="text" id="cPwdId" class="form-control myCpwdClass" pattern="^[a-z]{2,6}$" required>
+                                        <div id="cPwdValid" class="valid-feedback">Passwords Match</div>
+                                        <div id="cPwdInvalid" class="invalid-feedback">Doit contenir 8 à 20 caractères.</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Adresse">Adresse *</label>
+                                    <textarea class="form-control" id="Message" rows="2" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer votre adresse!
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3 form-group">
+                                        <label for="ville">Ville</label>
+                                        <input type="text" class="form-control" required>
+                                        <div class="valid-feedback">Valid</div>
+                                        <div class="invalid-feedback">a to z</div>
+                                    </div>
+                                    <div class="col-md-4 mb-3 form-group">
+                                        <label for="code postale">Code Postale</label>
+                                        <input type="text" id="cPwdId" class="form-control myCpwdClass" pattern="^{2,6}$" required>
+                                        <div id="cPwdValid" class="valid-feedback">Valide</div>
+                                        <div id="cPwdInvalid" class="invalid-feedback">Code postale invalide</div>
+                                    </div>
+                                    <div class="col-md-4 mb-3 form-group">
+                                        <label for="Pays">Pays</label>
+                                        <input type="text" id="cPwdId" class="form-control myCpwdClass" pattern="^[a-z]" required>
+                                        <div id="cPwdValid" class="valid-feedback">Valide</div>
+                                        <div id="cPwdInvalid" class="invalid-feedback">Pays invalide</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-success float-right mb-lg-0 mb-2" type="submit">Mettre à jours</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="informations" class="row mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h3>Informations personnelles</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row mb-3">
+                                    <label for="inputGroupFile04">Avatar</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nome">Nom</label>
+                                        <input type="text" class="form-control" id="nome" placeholder="Nom" value="" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez fournir un nom valide!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="prenom">Prénom</label>
+                                        <input type="text" class="form-control" id="prenom" placeholder="Prénom" value="" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez fournir un prénom valide!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="presentation">Présentez-vous *</label>
+                                    <textarea class="form-control" id="Message" rows="3" required></textarea>
+                                    <div class="invalid-feedback">
+                                        décrivez-vous dans un paragraphe
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-success float-right mb-lg-0 mb-2" type="submit">Mettre à jours</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="competences" class="row mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h3>Compétences</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group formation">
+                                    <h3>Formations</h3>
+                                    <div class="formation-wrapper d-flex flex-column align-items-end">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="startDate">Date début</label>
+                                                <input type="date" class="form-control" placeholder="Start Year" name="startdate" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="endDare">Date fin</label>
+                                                <input type="date" class="form-control" placeholder="End Year" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="Establishement">Establishement</label>
+                                                <input type="text" class="form-control" placeholder="Establishement" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="diplome">Diplôme</label>
+                                                <input type="text" class="form-control" placeholder="diplome" />
+                                            </div>
+                                        </div>
+                                        <a href="javascript:void(0);" class="add_formation float-right" title="Add field">Ajouter une formation<i class="fas fa-plus ml-2"></i></a>
+                                    </div>
+                                </div>
+                                <div class="form-group experience">
+                                    <h3>Expèriences</h3>
+                                    <div class="experience-wrapper d-flex flex-column align-items-end">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="startDate">Date début</label>
+                                                <input type="date" class="form-control" placeholder="Start Year" name="startdate" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="endDare">Date fin</label>
+                                                <input type="date" class="form-control" placeholder="End Year" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="societe">Société</label>
+                                                <input type="text" class="form-control" placeholder="Société" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="poste">Poste</label>
+                                                <input type="text" class="form-control" placeholder="poste" />
+                                            </div>
+                                        </div>
+                                        <a href="javascript:void(0);" class="add_experience float-right" title="Add field">Ajouter une expèrience<i class="fas fa-plus ml-2"></i></a>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-success float-right mb-lg-0 mt-5 mb-2" type="submit">Mettre à jours</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="inner-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <a href=".homepage.html">
+                            <img src="./assets/img/footer-logo-1.png" alt="">
+                        </a>
+                        <p class="text-left mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui voluptate consequuntur recusandae pariatur harum ut aliquam cumque atque magni vero non, quis rem? Facilis pariatur sapiente enim delectus eligendi.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <ul class="d-flex flex-column align-items-end justify-content-between">
+                            <li>
+                                <a href="contact.html">Nous contacter</a>
+                            </li>
+                            <li>
+                                <a href="Politique.html">Politique de confidentialité</a>
+                            </li>
+                            <li>
+                                <a href="termes-conditions.html">Termes et conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex flex-md-row flex-column justify-content-between align-items-center">
+                    <span class="mb-md-0 mb-3">© Copyright 2020 Bagolagona. Tous droits réservés. </span>
+                    <div class="d-flex justify-content-between social-media">
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>    </main>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
